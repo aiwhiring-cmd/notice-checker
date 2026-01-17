@@ -1,7 +1,7 @@
 import requests, hashlib
 from bs4 import BeautifulSoup
 
-URL = "https://erp.aktu.ac.in/Webpages/Public/Circular/CircularForWebsite.aspx"
+URL = "https://aktu.ac.in/circulars.html"
 BOT_TOKEN = "8432608523:AAEJBjMb1qJI_vkNvRBTNQRs0sNSYJTVVWA"
 CHAT_ID = "891664539"
 
