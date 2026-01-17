@@ -33,7 +33,13 @@ soup = BeautifulSoup(response.text, "html.parser")
 content = soup.get_text()
 current_hash = hashlib.md5(content.encode()).hexdigest()
 
-old_hash = open("hash.txt").read() if os.path.exists("hash.txt") else ""
+if not os.path.exists("hash.txt"):
+    open("hash.txt", "w").write(current_hash)
+    send("✅ AKTU notice tracker activated")
+    exit(0)
+
+old_hash = open("hash.txt").read()
+
 
 if current_hash != old_hash:
     send("🚨 AKTU: New circular / notice uploaded!")
